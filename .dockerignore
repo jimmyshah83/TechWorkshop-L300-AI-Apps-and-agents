@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+src/.venv/
+src/venv/
+src/data/
+.git/
+.github/
+docs/
+media/

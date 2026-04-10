@@ -14,11 +14,11 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy dependency metadata and install
-COPY pyproject.toml uv.lock ./
+COPY src/pyproject.toml src/uv.lock ./
 RUN uv sync --frozen --no-dev --no-install-project
 
 # Copy the rest of the code
-COPY . .
+COPY src/ .
 
 # Expose the port (default FastAPI/uvicorn port)
 EXPOSE 8000
